@@ -1,5 +1,5 @@
 
-#YouTube video embed iframe
+#On demand embed YouTube video iframe
 
 
 <strong>Demo: <a href="https://codepen.io/2kool2/pen/dXEwEd">Embed video iframe</a></strong>
@@ -41,8 +41,8 @@ Define SVGs for the "close" and "loading" icons:
 
 Add data attributes to the link.
 <br><code>data-video</code> is a requirement, it only needs populating with a value if it's different to the <code>href</code>.
-<br><code>data-video_img</code> .
-<br><code>data-video_stage</code> .
+<br><code>data-video_img</code> The image to use as background.
+<br><code>data-video_stage</code> The id of the block to add the video to.
 ```html
 <div id=stage class=stage role=presentational>
 
