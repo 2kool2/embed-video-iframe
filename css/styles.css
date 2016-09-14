@@ -1,0 +1,151 @@
+* {box-sizing:border-box;}
+body {font-family:sans-serif; line-height:1.5; margin:1rem 2rem;background-color:#eee}
+h1,h2 {font-weight:100;margin:0 0 .5rem}
+h2 {margin-top:2rem}
+li {margin:.75rem 0}
+code {font-size:larger}
+.u-margin2 {margin:2rem 0}
+
+
+.noJS .theatre {
+  /* no point in displaying without JS */
+  display: none;
+}
+
+.theatre {
+  max-width: 664px;
+  margin: 2em 0;
+  padding: 12px;
+  background-color: #fff;
+}
+.stage {
+  display: block;
+  max-width: 640px;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(255,255,255,.5);
+}
+.acts {
+  display: flex;
+  padding-top:12px;
+}
+.btn-video {
+  margin: 0 12px 0 0;
+}
+.btn-video:last-child {
+  margin: 0;
+}
+.stage .btn-video {
+  margin: 0;
+}
+
+[class^="btn-video"]{
+  display: block;
+  cursor: pointer;
+  padding:0;
+  border: 0 solid;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  max-height: 360px;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  will-change: filter, box-shadow;
+  transition: all .3s ease-out;
+}
+[class^="btn-video"]:hover,
+[class^="btn-video"]:focus {
+  -webkit-filter: contrast(110%) brightness(110%);
+  filter: contrast(110%) brightness(120%);
+  /* Red so you can tell */
+  box-shadow: 0 0 0 4px rgba(210, 33, 33, .8);
+  outline: 0 solid;
+}
+
+/* Text only button test -textOnly removed when copied to stage default */
+.btn-video-textOnly {
+  width: auto;
+  font-size: larger;
+  padding:.25rem;
+  color: #fff;
+  background-color: rgba(0,0,0,.75);
+}
+
+.btn-video_img {
+  display: block;
+  width: 100%;
+  border: 0 solid;
+}
+
+.video_iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Height calculated by JS as 16:9 ratio */
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+.video_iframe-on {
+  opacity: 1
+}
+
+
+/* SVG (Tesco) loading animation */
+
+.svg-loading {
+  opacity: 0;
+  fill: #fff;
+  pointer-events:none;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+  transition: opacity .3s ease-out;
+  -webkit-animation: rotate 4s linear 0s infinite;
+  animation: rotate 4s linear 0s infinite;
+}
+.-iframe-fetching .svg-loading {
+  opacity: 1;
+}
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/* YouTube play button */
+.svg-play {
+  fill: #D22121;
+  opacity: 1;
+  position: absolute;
+  width: 14%;
+  height: 14%;
+  top: 43%;
+  left: 43%;
+  transition: opacity .3s ease-out, transform .3s ease-out;
+  pointer-events: none;
+}
+.-iframe-fetching .svg-play,
+.-iframe-on .svg-play {
+  opacity: 0;
+}
+.stage:hover > .svg-play,
+.stage:focus > .svg-play {
+  transform: scale(1.2);
+}

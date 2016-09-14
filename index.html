@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang=en-GB>
+<head>
+  <meta charset=utf-8>
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <title>Accessible pop-up iframe modal dialog (v4))</title>
+  <link rel=stylesheet href=css/styles.css>
+</head>
+<body>
+
+<svg style="display:none">
+  <defs>
+    <symbol viewBox="0 0 224 170" id="icon-youtube-play">
+      <title>Play video</title>
+      <path fill="white" d="M92 111l54-28L92 55V111z"></path>
+      <path d="M209 46c0 0-2-14-8-20-7-8-16-8-20-8-28-2-69-2-69-2h0c0 0-42 0-69 2-4 1-12 1-20 8-6 6-8 20-8 20s-2 16-2 32v15c0 16 2 32 2 32s2 14 8 20c8 8 18 8 22 8 16 2 67 2 67 2s42 0 69-2c4 0 12 0 20-8 6-6 8-20 8-20s2-16 2-32v-15C211 62 209 46 209 46zM92 111V55l54 28L92 111z"></path>
+    </symbol>
+    <symbol viewBox='0 0 150 130' id="icon-loading">
+      <title>Loading</title>
+      <path d='M81.5 33l30.8-32.8c0.3-0.3 0.5-0.2 0.3 0.3 -1.8 5.2-1.7 15.3-1.7 15.3 -0.1 6.8-0.8 11.7-6.6 17.9L74.8 65.1c-0.2 0.2-0.4 0-0.3-0.2 1.5-5.1 1.2-15.1 1.2-15.1C75.4 45.6 76.4 38.4 81.5 33M105.9 54.8l43.8 10.3c0.4 0.1 0.4 0.4-0.2 0.4 -5.4 1-14.1 6.1-14.1 6.1 -6 3.3-10.5 5.2-18.8 3.2l-41.9-9.9c-0.3-0.1-0.2-0.3 0-0.4 5.2-1.3 13.7-6.5 13.7-6.5C92 55.9 98.7 53.1 105.9 54.8M99.4 86.3l13 43.2c0.1 0.4-0.1 0.5-0.4 0.1 -3.6-4.2-12.4-9.2-12.4-9.2 -5.8-3.5-9.7-6.5-12.2-14.6L75 64.5c-0.1-0.3 0.2-0.4 0.3-0.2 3.7 3.9 12.5 8.6 12.5 8.6C91.5 74.8 97.3 79.2 99.4 86.3M68.7 97l-30.8 32.8c-0.3 0.3-0.5 0.2-0.3-0.3 1.8-5.2 1.7-15.3 1.7-15.3 0.1-6.8 0.8-11.7 6.6-17.9l29.5-31.4c0.2-0.2 0.4 0 0.3 0.2 -1.5 5.1-1.2 15.1-1.2 15.1C74.8 84.4 73.8 91.6 68.7 97M44.1 75.8L0.3 65.4C-0.1 65.3-0.1 65 0.5 65c5.4-1 14.1-6.1 14.1-6.1 6-3.3 10.5-5.2 18.8-3.2l41.9 9.9c0.3 0.1 0.2 0.3 0 0.4 -5.2 1.3-13.7 6.5-13.7 6.5C58.1 74.7 51.3 77.5 44.1 75.8M50.2 43.8l-13-43.2c-0.1-0.4 0.1-0.5 0.4-0.1C41.2 4.7 50 9.7 50 9.7c5.8 3.5 9.7 6.5 12.2 14.6l12.4 41.3c0.1 0.3-0.2 0.4-0.3 0.2 -3.7-3.9-12.5-8.6-12.5-8.6C58.1 55.4 52.4 50.9 50.2 43.8'/>
+    </symbol>
+  </defs>
+</svg>
+
+
+<main id=main class=hasJS>
+
+  <h1>Embed video iframe (v2)</h1>
+
+  <p>Currently v2.0 is in use on the <a href="http://www.tesco.com/baking">Tesco Bake-off</a> page.</p>
+
+<!--
+  <p>
+    <button class=btn-video-textOnly
+            data-video="https://www.youtube.com/embed/lOUjUirKzM0"
+            data-video_img="img/video-1.jpg"
+            data-video_stage="stage" data-video_textOnly>
+      Text-only, no button bg image, default on stage
+    </button>
+  </p>
+-->
+
+  <section class=theatre>
+
+    <div id=stage class=stage></div>
+
+    <div class=acts>
+
+      <!-- As an image -->
+      <img class=btn-video
+           data-video="https://www.youtube.com/embed/-mzBeT19ijQ"
+           data-video_img="img/bake-on1.jpg"
+           data-video_stage="stage"
+           alt="Play the Bake-off video">
+
+      <!-- As a button -->
+      <button class=btn-video
+              data-video="https://www.youtube.com/embed/lOUjUirKzM0"
+              data-video_img="img/video-1.jpg"
+              data-video_stage="stage">
+        Play the Toy-testers video
+      </button>
+
+      <!-- As a link (recommended) -->
+      <a class=btn-video
+         href="https://www.youtube.com/embed/RLEKiXaixLY"
+         data-video_img="img/video-2.jpg"
+         data-video_stage="stage">
+        Play the Tannoy-takeover video
+      </a>
+
+    </div>
+
+  </section>
+
+  <p>
+    <button class=btn-video-textOnly
+            data-video="https://www.youtube.com/embed/RLEKiXaixLY"
+            data-video_img="img/video-2.jpg"
+            data-video_stage="stage"
+            data-video_textOnly>
+      Text-only, without bg image on button
+    </button>
+  </p>
+
+  <section>
+    <h2>Description</h2>
+    <p>For technical reasons, at Tesco we cannot hijack a link to embed a video.<br> We tried using images but the tap/click didn't track.<br> Our solution; use a button.</p>
+    <p>This version will launch a video from most objects: anchors, buttons, divs, spans, images.<br>Roles and behaviours are amended to suit.</p>
+    <p>All layout is in the CSS and the only magic number is the 16:9 ratio.</p>
+  </section>
+
+  <section>
+    <h2>Tested</h2>
+    <p>PC: IE9 - Edge, Firefox, Chrome.<br> Mac: Firefox, Chrome, Safari.<br> No mobile testing as yet.</p>
+  </section>
+
+
+  <h2>Single video example</h2>
+
+  <div id=stage2 class=stage role=presentational>
+    <a class=btn-video
+       href="https://www.youtube.com/embed/RLEKiXaixLY"
+       data-video
+       data-video_img="img/video-2.jpg"
+       data-video_stage="stage2">
+      Play the Tannoy-takeover video
+    </a>
+
+  </div>
+
+  <p>Sent for testing to the <a href="http://digitalaccessibilitycentre.org/">Digital Accessibility Centre</a>.</p>
+
+
+</main>
+
+
+
+<p>CodePen demo: <a href="https://codepen.io/2kool2/pen/LkaXay">WCAG ARIA accessible pop-up iframe modal dialog (v4)</a></p>
+
+<p>Mike Foskett @ <a href="https://websemantics.uk/">webSemantics</a></p>
+
+
+<!--
+<script src=js/embed-video-iframe.2.0.min.js></script>
+ -->
+<!-- -->
+<script src=js/embed-video-iframe.2.0.js></script>
+
+</body>
+</html>
