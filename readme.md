@@ -1,6 +1,5 @@
 
-#On demand, embed YouTube video iframe
-
+#On demand, embed YouTube video's into an iframe
 
 <strong>CodePen demo: <a href="https://codepen.io/2kool2/pen/dXEwEd">Embed video iframe</a></strong>
 
@@ -52,7 +51,7 @@ Add data attributes to the link.
        data-video="https://www.youtube.com/embed/RLEKiXaixLY"
        data-video_img="img/video-2.jpg"
        data-video_stage="stage">
-      Play the [description]] video
+      Play the [description] video
     </a>
 
 </div>
@@ -74,14 +73,14 @@ The demo shows, links (image and text-only), buttons, and just an image.
 <br>
 ##Caveat
 
-This method neither raises or lowers accessibility barriers caused by the <code>iframe</code> content.
+This method neither raises or lowers accessibility barriers caused by the <code>iframe</code> content itself.
 
 
 <br>
 ##Current status
 
-In use here: <a href="http://www.tesco.com/baking/">Tesco Bake Off</a>
-Preliminary accessibility testing by <a href="http://www.digitalaccessibilitycentre.org/">Digital Accessibility Centre</a>.
+Currently in use as part of the <a href="http://www.tesco.com/baking/">Tesco Bake Off</a> campaign.<br>
+Preliminary accessibility testing performed by the <a href="http://www.digitalaccessibilitycentre.org/">Digital Accessibility Centre</a>.
 
 
 <hr>
