@@ -1,5 +1,6 @@
+#On demand, embed YouTube video's in an iframe
 
-#On demand, embed YouTube video's into an iframe
+One or more video links playing a video in one or more target locations.
 
 <strong>CodePen demo: <a href="https://codepen.io/2kool2/pen/dXEwEd">Embed video iframe</a></strong>
 
@@ -12,6 +13,10 @@
 * Vanilla JavaScript with zero dependencies.
 * Lightweight, less than XXX KB to the browser with XXX KB CSS.
 * Just a link is presented when JavaScript is unavailable.
+* Multiple video links targeting one or more target locations.
+* Link and target area may be the same container.
+
+Solution presented accomodates multiple video choices into a single area
 
 
 <br>
@@ -41,8 +46,8 @@ Define SVGs for the "close" and "loading" icons:
 
 Add data attributes to the link.
 <br><code>data-video</code> is a requirement, it only needs populating with a value if it's different to the <code>href</code>.
-<br><code>data-video_img</code> The image to use as background.
-<br><code>data-video_stage</code> The id of the block to add the video to.
+<br><code>data-video_img</code> The location of the image to use as background.
+<br><code>data-video_stage</code> The id of the container to add the video to.
 ```html
 <div id=stage class=stage role=presentational>
 
