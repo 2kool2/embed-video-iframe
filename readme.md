@@ -1,15 +1,15 @@
 
-#On demand embed YouTube video iframe
+#On demand, embed YouTube video iframe
 
 
-<strong>Demo: <a href="https://codepen.io/2kool2/pen/dXEwEd">Embed video iframe</a></strong>
+<strong>CodePen demo: <a href="https://codepen.io/2kool2/pen/dXEwEd">Embed video iframe</a></strong>
 
 <br>
 ##Features
 
 * All customisations are via inline HTML attributes and CSS. No need to edit JavaScript.
 * <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2 level AA with <abbr title="Accessible Rich Internet Applications">ARIA</abbr> support
-* Fully responsive, mobile-first approach.<br>Modal and <code>iframe</code> resize with the window.
+* Fully responsive, mobile-first approach.<br><code>iframe</code> resizes with the window.
 * Lightweight, less than XXX KB to the browser with XXX KB CSS.
 * Just a link is presented when JavaScript is unavailable.
 
@@ -61,6 +61,13 @@ Add the script:
 ```html
 <script src="js/accessible-video-iframe.2.0.min.js"></script>
 ```
+
+
+<br>
+##Alternate launch buttons
+
+The video may be launched by objects other than links.<br>
+The demo shows, links (image and text-only), buttons, and just an image.
 
 
 <br>
