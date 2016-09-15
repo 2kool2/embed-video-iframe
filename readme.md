@@ -10,6 +10,7 @@
 * All customisations are via inline HTML attributes and CSS. No need to edit JavaScript.
 * <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2 level AA with <abbr title="Accessible Rich Internet Applications">ARIA</abbr> support
 * Fully responsive, mobile-first approach.<br><code>iframe</code> resizes with the window.
+* Vanilla JavaScript with zero dependencies.
 * Lightweight, less than XXX KB to the browser with XXX KB CSS.
 * Just a link is presented when JavaScript is unavailable.
 
