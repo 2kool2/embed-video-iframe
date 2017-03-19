@@ -5,7 +5,7 @@ One or more video links playing a video in one or more target locations.
 <strong>CodePen demo: <a href="https://codepen.io/2kool2/pen/dXEwEd">Embed video iframe</a></strong>
 
 <br>
-##Features
+<h2>Features</h2>
 
 * All customisations are via inline HTML attributes and CSS. No need to edit JavaScript.
 * <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2 level AA with WAI-<abbr title="Accessible Rich Internet Applications">ARIA</abbr> support
@@ -20,7 +20,7 @@ Solution presented accomodates multiple video choices into a single area
 
 
 <br>
-##Basic usage
+<h2>Basic usage</h2>
 
 Link to the stylesheet:
 ```html
@@ -69,20 +69,20 @@ Add the script:
 
 
 <br>
-##Alternate launch buttons
+<h2>Alternate launch buttons</h2>
 
 The video may be launched by objects other than links.<br>
 The demo shows, links (image and text-only), buttons, and just an image.
 
 
 <br>
-##Caveat
+<h2>Caveat</h2>
 
 This method neither raises or lowers accessibility barriers caused by the <code>iframe</code> content itself.
 
 
 <br>
-##Current status
+<h2>Current status</h2>
 
 Currently in use as part of the <a href="http://www.tesco.com/baking/">Tesco Bake Off</a> campaign.<br>
 Preliminary accessibility testing performed by the <a href="http://www.digitalaccessibilitycentre.org/">Digital Accessibility Centre</a>.
